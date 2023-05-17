@@ -9,5 +9,5 @@ urlpatterns = [
     path('admin/',admin.site.urls),
     path('', index,name='index'),
     path('post_list/', post_list, name='post_list'),
-    path('post_list/<int:pk>',posting, name='posting'),
+    path('post_list/<int:pk>/',posting, name='posting'),
 ]
