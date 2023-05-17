@@ -3,7 +3,7 @@
         <title>{{post.postname}}</title>
     </head>
     <body>
-        <h2>내가 만난 길고양이들</h2>
+        <h2>고양이 자랑대회</h2>
         <p>{{post.postname}}</p>
         <p>{{post.contents}}</p>
         {% if post.mainphoto %}
@@ -11,7 +11,7 @@
 
             <br>
         {% endif %}
-        <a href="post_list/">목록</a>
-        <a href="/blog/{{post.pk}}/remove">삭제</a>
+        <a href="/post_list/">목록</a>
+        <a href="/post_list/{{post.pk}}/remove">삭제</a>
     </body>
 </html>

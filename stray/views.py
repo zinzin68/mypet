@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Post
 
 # Create your views here.
@@ -29,7 +29,7 @@ def new_post(request):
                 contents=request.POST['contents'],
                 mainphoto=request.POST['mainphoto'],
             )
-        return redirect('/post_list')
+        return redirect('/post_list/')
     return render(request, 'stray/new_post.html')
 
 def remove_post(request, pk):
@@ -37,4 +37,4 @@ def remove_post(request, pk):
     if request.method =='POST':
         post.delete()
         return redirect('/post_list/')
-    return render(request, 'stray/remove_post.html',{'Post:post'})
+    return render(request, 'stray/remove_post.html',{'Post':post})
