@@ -3,12 +3,12 @@
         <title>Post List</title>
     </head>
     <body>
-        <h2>게시판 페이지입니다</h2>
+        <h2>다양한 길고양이들!!</h2>
         <table>
         {% for list in postlist %} 
+            <!--게시글 클릭시 세부페이지 이동-->
             <ul>
-                <li>{{list.postname}}</li>
-                <li>{{list.contents}}</li>
+                <li><a href="{{list.pk}}/">{{list.postname}}</a></li>
             </ul>
         {% endfor %}
         </table>
