@@ -6,8 +6,6 @@ from .views import index, new_post, post_list, posting, remove_post
 from django.conf.urls.static import static
 from django.conf import settings
 
-app_name='stray'
-
 urlpatterns = [
     path('admin/',admin.site.urls),
 
