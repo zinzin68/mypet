@@ -3,12 +3,13 @@
         <title>Post List</title>
     </head>
     <body>
-        <h2>다양한 길고양이들!!</h2>
+        <h2>고양이 좋아하세요?</h2>
+        <h3>여기 다양한 고양이가 있습니다.</h3>
         <table>
         {% for list in postlist %} 
             <!--게시글 클릭시 세부페이지 이동-->
             <ul>
-                <li><a href="{{list.pk}}">{{list.postname}}</a></li>
+                <li><a href="{{list.pk}}/">{{list.postname}}</a></li>
             </ul>
         {% endfor %}
         </table>
